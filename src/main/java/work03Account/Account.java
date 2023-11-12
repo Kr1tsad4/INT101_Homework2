@@ -15,9 +15,15 @@ public class Account {
              throw new NullPointerException();
          }
         this.owner = owner;
-        this.no = Utilitor.computeIsbn10(nextNo);
-        nextNo += 10;
+        long result = Utilitor.computeIsbn10(nextNo);
+        while(result == 10){           
+            nextNo++;
+            result = Utilitor.computeIsbn10(nextNo);         
+        }
+        this.no = 10 * nextNo + result;
+        nextNo++;
         this.balance = 0.0;
+        
      }
      //3.7
      public long getNo() {
