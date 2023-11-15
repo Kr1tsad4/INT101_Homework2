@@ -54,12 +54,4 @@ public class Person {
         }
         return false;
     }
-    
-
-    /*
-
-       2.11 Show in this "work02Person" method how to use 2.6-2.10
-            and check their correctness. */
-
-
 }
