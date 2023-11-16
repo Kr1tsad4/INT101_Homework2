@@ -26,9 +26,9 @@ public class Utilitor {
     public static long computeIsbn10(long isbn10) {
         int sum = 0;
         long digits;
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 9; i++) {
             digits = isbn10 % 10;
-            sum += digits * i;
+            sum += digits ;
             isbn10 /= 10;
         }
         long checkDigit = sum % 11;
